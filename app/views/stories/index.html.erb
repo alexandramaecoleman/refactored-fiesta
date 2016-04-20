@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Latest News</h1>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <% @stories.each do |story| %>
+      <div class="col-sm-2 col-md-3">
+        <%= image_tag(story.image_url, class: "img-responsive") %>
+        <h4><%= story.name %></h4>
+        <p><%= story.description %></p>
+        <p><%= story.category %></p>
+        <p><%= story.date %></p>
+        <p><%= link_to 'Show', story %></p>
+        <p><%= link_to 'Edit', edit_story_path(story) %></p>
+        <p><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>
