@@ -49,6 +49,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
+    dalli (2.7.6)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -77,6 +78,8 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
     rack (1.6.4)
+    rack-cache (1.6.1)
+      rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.6)
@@ -151,9 +154,11 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  dalli
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  rack-cache
   rails (= 4.2.6)
   rails_12factor
   sass-rails (~> 5.0)
